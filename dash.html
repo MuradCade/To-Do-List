@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+	<link rel="shortcut icon" href="dash.png" type="icon">
+	<title> To Do List</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Learn how to use javascript like mysql ">
+
+	<meta name="author" content="Code With Mark">
+	<meta name="authorUrl" content="http://codewithmark.com">
+
+	<!--[css/js files > start]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+	<script src="https://cdn.awesomefunctions.com/awesome-functions.min.js"></script> 
+	<!--[css/js files > end]-->
+
+
+	<script src="storage.js"></script> 
+ 
+ 
+</head>
+
+
+	<script type="text/javascript">
+
+		//dom storage data
+		
+ 		var tblTasks = 
+		[				
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Python API Assignment', 
+				TaskDate : moment().format("2021-09-01"), 
+				TaskDesc : "Api Python Assignment Is Final Assignment", 
+			},
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Create Login Page Using Flask And Then Login Using Selenium', 
+				TaskDate : moment().format("2021-09-10"), 
+				TaskDesc : "Project Course Webscriping Using Python",
+			},			
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Final Exam Algorithm Analysis', 
+				TaskDate : moment().add(7, 'days').format("2021-09-24") , 
+				TaskDesc : "Final Exam Memorize The Lessons",
+			},
+            { 
+				rec_id:js.MD5(),
+				TaskName : 'My Project', 
+				TaskDate : moment().add(7, 'days').format("2021-09-26") , 
+				TaskDesc : "Creating GUI For My Java Comminication App",
+			}
+         
+		]; 
+
+		console.table(tblTasks);
+
+		//var tblTasks = []
+
+
+
+	 
+	</script>
+
+<body> 
+
+<h1 class="text-center">Welcome To My Main Todo List</h1>
+
+<!--[Menu - Start]-->
+<div class="text-center">
+
+	<div class="btn btn-success BTN_Add_New"> Add New</div>
+	
+	<div class="btn btn-success BTN_View"> View All Tasks</div>
+
+	<div class="btn btn-success BTN_Delete_All"> Delete All Tasks</div>
+	<style>
+		body{
+			background-color: rgb(223, 155, 9);
+			font-weight: bolder;
+		}
+		.btn{
+			background-color:green ;
+			color: white;
+		}
+	</style>
+	<button class="btn" onclick="logout()">Logout</button>
+
+</div>
+<!--[Menu - End]-->
+<br><br>
+
+
+
+<!--[Screen Data - Start]-->
+<div class=" container Screen Screen_Data  "  >  </div>
+<!--[Screen Data - End]-->
+
+
+
+<!--[New Task Template - Start]-->
+<div class="Screen Template_New_Task" style="display:none;"  >
+
+	<div class="panel panel-primary  center-block" style="max-width:400px;">
+	  
+	  	<div class="panel-heading text-center">Add A New Task</div>
+
+	  	<!--[New Task Body - Start]-->
+		<div class="panel-body"> 
+
+			<!--[Task Name - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Task Name</span>
+				<input   type="text" class="form-control TaskName"  placeholder="Type In Task Name"   >
+			</div>
+			<br><br>
+			<!--[Task Name - End]-->
+
+			<!--[Completion Date - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Task Completion Date</span>
+				<input   type="date" class="form-control TaskDate"  >
+			</div>
+			<br><br>
+			<!--[Completion Date - End]-->
+
+
+			<!--[Task description - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Task description</span>
+				<textarea class="form-control TaskDesc" rows="5" placeholder="Type In Task description"></textarea>
+			</div>
+			<br><br>
+			<!--[Task description - End]-->
+
+			<div class="btn btn-primary text-center btn_Task"> View All Tasks</div>
+			
+
+		</div>
+	  <!--[New Task Body - Start]-->
+	</div>
+</div>
+<!--[New Task Template - Start]-->
+
+
+
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
