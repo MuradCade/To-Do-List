@@ -1,0 +1,49 @@
+*{
+				margin:0;
+				box-sizing:border-box;
+				
+}
+body{
+				font-family: 'Roboto', sans-serif;
+       color:#298390;
+
+}
+
+.con{
+          
+				    max-width: 14480px;
+				    height: 800px;
+				    display: flex;
+				    align-items:center;
+				    justify-content:center;
+				    flex-direction: column;
+				    font-weight: bold;
+				    font-size: 18px;
+				    
+				    
+}
+
+.text{
+				display:flex;
+				align-items:center;
+				justify-content: center;
+				flex-direction:column;
+}
+
+.start{
+				width:175px;
+				hight:50px;
+				border-radius: 50px;
+				margin-top: 20px;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				border: 2px solid #298390;
+				transition: all  0.2s ensue;
+}
+
+.start:hover{
+				background-color: #298390;
+				color: white;
+}
